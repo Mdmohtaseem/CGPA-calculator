@@ -1,0 +1,194 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    /* background-color: rgb(205, 203, 203); */
+    background-color: rgb(182, 177, 177);
+}
+
+#container {
+    /* align-items: center; */
+    text-align: center;
+    width: 100%;
+    /* background-color: rgb(182, 177, 177); */
+}
+
+.heading {
+    /* align-items: center; */
+    width: 100%;
+    text-align: center;
+    color: white;
+    background-color: rgb(97, 158, 11);
+    padding: 10px;
+}
+
+.dropbtn {
+    background-color: inherit;
+    color: black;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+.dropdown-select-type {
+    position: relative;
+    display: inline-block;
+    margin-top: 10px;
+    /* width: 100%; */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown-select-type:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-select-type:hover .dropbtn {
+    background-color: red;
+}
+
+/* .add-btn{
+    padding: 6px 10px;
+    font-size: 20px;
+} */
+
+.details-per-subject{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.subject{
+    font-size: 20px;
+}
+
+.credit, .grade{
+    padding: 6px;
+    font-size: 15px;
+    border: 1px solid black;
+    outline: none;
+}
+
+.save-btn{
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    padding: 3px;
+}
+
+.subject-list-container div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    font-size: 18px;
+    margin: 5px;
+}
+
+#small-screen-marks{
+    display: flex;
+}
+
+.subject-list-container button{
+    padding: 5px;
+    cursor: pointer;
+}
+
+.calc-cgpa-btn , .total-marks-btn{
+    width: 200px;
+    padding: 5px;
+    font-size: 13px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* -----------------Style for Hybrid Page------------------------ */
+
+.content-container-hybrid{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+}
+
+.details-per-subject-hybrid{
+    display: grid;
+    grid-template-columns: 150px 200px 150px 150px;
+    gap: 5px;
+}
+
+.details-per-subject-hybrid label{
+    text-align: right;
+    padding-top: 3px;
+    justify-content: left;
+}
+
+.clicked-save-btn{
+    background-color: rgb(56, 241, 31);
+    color: white;
+    border: 1px solid green;
+}
+
+.note{
+    padding-bottom: 5px;
+}
+
+
+/* -------------------------Media Query-------------------------------- */
+
+
+@media only screen and (max-width: 600px) {
+    .details-per-subject-hybrid{
+        display: grid;
+        grid-template-columns: auto;
+        gap: 5px;
+    }
+
+    .details-per-subject-hybrid label{
+        text-align: center;
+    }
+    .save-btn{
+        width: 100%;
+    }
+
+    .details-per-subject{
+        flex-direction: column;
+        width: 55%;
+        margin: 10px auto;
+    }
+
+    .subject-list-container div{
+        flex-direction: column;
+        gap: 10px;
+    }
+    #small-screen-marks{
+        flex-direction: row;
+        gap: 30px;
+    }
+
+}

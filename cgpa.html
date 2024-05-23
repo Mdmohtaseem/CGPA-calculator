@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Score Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"> -->
+    <!-- </script> -->
+  </head>
+  <body>
+    <div class="" id="container">
+      <div class="heading">
+        <h1>Chandigarh University</h1>
+        <h3>Score Calculator</h3>
+        <h5>Follow me on linkedin
+        <a href="https://www.linkedin.com/in/md-mohtaseem-6b3964230/">Linkedin</a>
+        </h5>
+      </div>
+
+      <div class="dropdown-select-type">
+        <button class="dropbtn">CGPA 
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="cgpa.html">CGPA</a>
+          <a href="score.html">Total Score</a>
+        </div>
+      </div>
+
+      <p class="note">
+        * <b>DO NOT</b> add <b>Mandotary Non Graded(MNG)</b> subjects.
+      </p>
+      <p>
+        eg:- ABC: 4(Credit of the subject): A(Grade Received)
+      </p>
+      <p>
+        Under total credit enter: 4
+      </p>
+      <p>
+        Under grade enter: A
+        
+      </p>
+      <p>
+        <b>Click on the checkbox to submit the scores</b>
+      </p>
+      <div id="content-container">
+        <div class="details-per-subject">
+          <label for="fname" class="subject">Subject: </label>
+          <input type="number" class="js-credit credit" name="fname" placeholder="Total Credit">
+          <input type="text" class="js-grade grade" name="fname" placeholder="Grade">
+          <button class="js-save-btn save-btn" title="Save" onclick="calculateTotal();">
+            <i class="fa fa-check" aria-hidden="true"></i>
+          </button><br>
+        </div>
+
+        <div class="js-subject-list-container subject-list-container">
+        </div>
+
+        <div>
+          <button class="calc-cgpa-btn" onclick="calculateCGPA();">Calculate CGPA</button>
+        </div>
+
+      </div>
+ 
+      <!-- <button type="button" class="add-btn" onclick="addSubject();">
+        <i class="fa fa-plus" aria-hidden="true"></i>
+      </button> -->
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+  </body>
+</html>
